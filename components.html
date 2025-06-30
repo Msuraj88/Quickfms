@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Bootstrap Project</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Add this inside your <head> tag in index.html -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Global CSS File -->
+    <link rel="stylesheet" href="global.css">
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Brand</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Features</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Pricing</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Buttons Section -->
+                <div class="container my-4">
+                    <h5 class="fw-semibold mb-3">Buttons Sizes</h5>
+                    <hr>
+
+                    <!-- Solid Buttons -->
+                    <div class="d-flex gap-3 mb-3">
+                        <button class="btn btn-lg custom-btn">Large Button</button>
+                        <button class="btn btn-md custom-btn">Medium Button</button>
+                        <button class="btn btn-sm custom-btn">Small Button</button>
+                    </div>
+
+                    <!-- Outline Buttons -->
+                    <div class="d-flex gap-3">
+                        <button class="btn btn-outline-primary btn-lg rounded-3 custom-btn">Large Button</button>
+                        <button class="btn btn-outline-primary btn-md rounded-3 custom-btn">Medium Button</button>
+                        <button class="btn btn-outline-primary btn-sm rounded-3 custom-btn">Small Button</button>
+                    </div>
+                </div>
+                F
+
+            </div>
+        </nav>
+    </header>
+
+    <main class="container py-5">
+        <h1>Welcome to the Bootstrap Project</h1>
+        <p>This is a simple project to demonstrate how you can create reusable components using Bootstrap 5, jQuery, and
+            custom global CSS.</p>
+
+        <button id="exampleButton" class="btn btn-primary">Click Me</button>
+
+        <div class="container py-5">
+            <button class="btn primary-btn">Primary</button>
+            <button class="btn primary-outline-btn">Primary</button>
+            <button class="btn dark-btn">Dark</button>
+            <button class="btn light-btn">Light</button>
+        </div>
+    </main>
+
+    <footer class="bg-light text-center py-3">
+        <p>© 2025 My Company</p>
+    </footer>
+
+    <!-- jQuery and Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS File -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>
