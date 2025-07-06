@@ -38,18 +38,18 @@
 .property-text .label {
     margin: 0;
     font-weight: 500;
-    font-size: 14px;
+    font-size: var(--font-size-base);
 }
 
 .property-text .value {
     margin: 6px 0;
-    font-size: 28px;
+    font-size: var(--font-size-lg);
     font-weight: bold;
 }
 
 .property-text .sub-label {
     margin: 0;
-    font-size: 13px;
+    font-size: var(--font-size-base);
     color: #555;
 }
 
@@ -117,7 +117,7 @@
 }
 
 .my-space-text h2 {
-    font-size: var(--font-size-md);
+    font-size: var(--font-size-base);
     font-weight: var(--font-weight-semi-bold);
     margin: 0px;
 }
@@ -140,7 +140,7 @@
 }
 
 .chart-center .label {
-    font-size: 14px;
+    font-size: var(--font-size-base);
     color: #555;
 }
 
@@ -230,7 +230,7 @@
     }
 
     .bar-label {
-      font-size: 13px;
+      font-size: var(--font-size-base);
       color: #555;
       margin-top: 70px;
     }
@@ -260,7 +260,7 @@
     }
 
     .chart-center .label {
-      font-size: 13px;
+      font-size: var(--font-size-base);
       color: #555;
     }
 
@@ -282,7 +282,7 @@
       display: flex;
       align-items: center;
       gap: 6px;
-      font-size: 13px;
+      font-size: var(--font-size-base)
     }
 
     .dot {

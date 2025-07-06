@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Layout</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        xintegrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="..//js/sidebar.js"></script>
+
+    <link rel="stylesheet" href="https://sets.hugeicons.com/YOUR-SET-ID.css" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="helpDesk.css">
+    <link rel="stylesheet" href="..//global.css">
+
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <!-- Sidebar -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <img src="..//Images/logo.png" alt="Logo" class="sidebar-logo-text">
+                <!-- <i class="bi bi-tencent-qq "></i> -->
+                <img class="sidebar-logo-icon" src="..//Images/logo-m.png">
+            </div>
+
+            <ul class="list-unstyled components">
+                <li>
+                    <a href="../index.html" class="dashboard" data-bs-toggle="tooltip" data-bs-placement="right"><i
+                            class="bi bi-house icon-dashboard"></i><span class="menu-text">Dashboard</span></a>
+                </li>
+                <li class="active">
+                    <a href="helpdesk.html" class="booking" data-bs-toggle="tooltip" data-bs-placement="right"><i
+                            class="bi bi-question-square icon-booking"></i><span class="menu-text">Help Desk</span></a>
+                </li>
+                <li>
+                    <a href="#adminSubmenu" data-bs-toggle="collapse" aria-expanded="false"
+                        class="dropdown-toggle admin" data-bs-placement="right">
+                        <i class="bi bi-person-gear icon-admin"></i>
+                        <span class="menu-text">Admin Functions</span>
+                        <i class="bi bi-chevron-down arrow-icon"></i>
+                    </a>
+                    <ul class="collapse list-unstyled" id="adminSubmenu">
+                        <li><a href="#"><span class="menu-text">User Management</span></a></li>
+                        <li><a href="#"><span class="menu-text">Roles & Permissions</span></a></li>
+                        <li><a href="#"><span class="menu-text">System Settings</span></a></li>
+                    </ul>
+                </li>
+
+                <!-- <p>Group Name</p> -->
+                <li>
+                    <a href="#" data-bs-toggle="tooltip" data-bs-placement="right"><i
+                            class="bi bi-building-fill icon-property"></i><span class="menu-text">Property
+                            Mgmt.</span></a>
+                </li>
+                <li>
+                    <a href="#" data-bs-toggle="tooltip" data-bs-placement="right"><i
+                            class="bi bi-grid-3x3-gap-fill icon-space"></i><span class="menu-text">Space
+                            Mgmt.</span></a>
+                </li>
+                <li>
+                    <a href="#" data-bs-toggle="tooltip" data-bs-placement="right"><i
+                            class="bi bi-archive-fill icon-asset"></i><span class="menu-text">Asset Mgmt.</span></a>
+                </li>
+                <li>
+                    <a href="#" data-bs-toggle="tooltip" data-bs-placement="right"><i
+                            class="bi bi-tools icon-maintenance"></i><span class="menu-text">Maintenance
+                            Mgmt.</span></a>
+                </li>
+            </ul>
+        </nav>
+        <!-- End Sidebar -->
+
+        <!-- Page Content -->
+        <div id="content">
+
+            <!-- Header -->
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebar-toggle" class="btn">
+                        <i class="bi bi-list"></i>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <!-- Search Bar -->
+                        <form class="d-flex ms-3 global-search-input">
+                            <div class="input-group">
+                                <span class="input-group-text bg-transparent border-0"><i
+                                        class="bi bi-search"></i></span>
+                                <input class="form-control me-2 border-0" type="search" placeholder="Search"
+                                    aria-label="Search">
+                            </div>
+                        </form>
+
+                        <!-- Right Aligned Items -->
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
+                            <li class="nav-item me-3">
+                                <div class="d-flex flex-column company-logo">
+                                    <img src="..//Images/company-logo.png" alt="Logo" class="sidebar-logo-text">
+                                </div>
+                            </li>
+                            <li class="nav-item me-3 last-login">
+                                <div class="d-flex flex-column">
+                                    <span class="">Last Login</span>
+                                    <small class="text-muted">26 May 2025 12:31:00</small>
+                                </div>
+                            </li>
+
+                            <li class="nav-item me-3 notification-bell">
+                                <a class="nav-link" href="#"><i class="bi bi-bell"></i></a>
+                            </li>
+                            <li class="nav-item dropdown user-profile">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    <img src="https://i.pravatar.cc/40?img=3" class="rounded-circle" alt="Profile">
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end">
+                                    <li><a class="dropdown-item" href="#">My Profile</a></li>
+                                    <li><a class="dropdown-item" href="#">Settings</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Logout</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- End Header -->
+
+            <!-- Main Content -->
+            <main class="main-content">
+                <div class="container-fluid">
+                    <h2 class="mb-4 page-tite">Help Desk</h2>
+
+                    <div class="card">
+                        <ul class="nav nav-pills custom-tabs" id="pills-tab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="pills-requests-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-requests" type="button" role="tab">
+                                    <i class="bi bi-house-door me-1"></i> Requests
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pills-technician-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-technician" type="button" role="tab">
+                                    <i class="bi bi-house-door me-1"></i> Technician
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pills-delegate-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-delegate" type="button" role="tab">
+                                    <i class="bi bi-house-door me-1"></i> Addign/Delegate Reques
+                                </button>
+                            </li>
+                        </ul>
+
+                        <!-- <div class="tab-content" id="pills-tabContent">
+                            <div class="tab-pane fade show active" id="pills-requests" role="tabpanel">Requests Content
+                            </div>
+                            <div class="tab-pane fade" id="pills-technician" role="tabpanel">Technician Content</div>
+                            <div class="tab-pane fade" id="pills-delegate" role="tabpanel">Delegate Content</div>
+                        </div> -->
+
+                    </div>
+
+                    <div class="tab-content" id="pills-tabContent">
+                        <div class="tab-pane fade show active card mt-24" id="pills-requests" role="tabpanel">
+                            <div class="card-head helpDesk-card-head">
+                                <h5 class="card-title">Create New Request</h5>
+                            </div>
+
+                            <div class="card-containt">
+                                <div class="reuest-form">
+                                    <div class="responsive-style d-flex justify-content-between mb-3">
+                                        <div class="mb-2 d-flex gap-2">
+                                            <div class="request-type-toggle d-flex gap-2">
+                                                <label class="toggle-option">
+                                                    <input type="radio" name="requestType" value="self" checked>
+                                                    <span>Self</span>
+                                                </label>
+                                                <label class="toggle-option">
+                                                    <input type="radio" name="requestType" value="onbehalf">
+                                                    <span>On behalf of</span>
+                                                </label>
+                                            </div>
+
+                                        </div>
+                                        <a href="#" class="icon-btn" data-bs-toggle="modal"
+                                            data-bs-target="#escalationModal"><i class="bi bi-eye"></i> Click here to
+                                            view SLA &
+                                            Escalation</a>
+                                    </div>
+
+                                    <div class="row">
+                                        <!-- Left Profile Section -->
+                                        <div class="col-md-3 mb-3">
+
+                                            <div class="employee-card">
+                                                <div class="emp-id">Emp. ID : 392</div>
+
+
+                                                <div class="label-row">
+                                                    <div class="prifile-img-wrap">
+                                                        <img src="https://randomuser.me/api/portraits/women/68.jpg"
+                                                            class="profile-img" alt="Ada Wilson">
+                                                    </div>
+                                                    <div>
+                                                        <p class="label-title">Name</p>
+                                                        <p class="label-value">Ada Wilson</p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="label-row">
+                                                    <div class="icon-wrap">
+                                                        <i class="bi bi-person-badge-fill"></i>
+                                                    </div>
+                                                    <div>
+                                                        <p class="label-title">Team</p>
+                                                        <p class="label-value">Core Team</p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="label-row">
+                                                    <div class="icon-wrap">
+                                                        <i class="bi bi-person-badge-fill"></i>
+                                                    </div>
+                                                    <div>
+                                                        <p class="label-title">Label</p>
+                                                        <p class="label-value">ABU/EHQ/PKG/HQ-637</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+
+                                        <!-- Right Form Section -->
+                                        <div class="col-md-9">
+                                            <!-- Location -->
+                                            <div class="section-label"><i
+                                                    class="bi bi-geo-alt-fill section-icon text-primary"></i>Location
+                                            </div>
+                                            <div class="mb-2">
+                                                <button class="btn btn-outline-secondary active">Somajiguda
+                                                    (SMG)</button>
+                                                <button class="btn btn-outline-secondary">Indiranagar (IND)</button>
+                                            </div>
+
+                                            <!-- Category -->
+                                            <div class="section-label"><i
+                                                    class="bi bi-layers-fill section-icon text-secondary"></i>Category
+                                            </div>
+                                            <div class="mb-2">
+                                                <button class="btn btn-outline-secondary">Ad hoc</button>
+                                                <button class="btn btn-outline-secondary">Incident</button>
+                                                <button class="btn btn-outline-secondary active">Maintenance</button>
+                                                <button class="btn btn-outline-secondary">Service Request</button>
+                                            </div>
+
+                                            <!-- Subcategory -->
+                                            <div class="section-label"><i
+                                                    class="bi bi-diagram-3-fill section-icon text-success"></i>Subcategory
+                                            </div>
+                                            <div class="mb-2">
+                                                <button class="btn btn-outline-secondary active">Custom Report/Data
+                                                    Request</button>
+                                                <button class="btn btn-outline-secondary">Feedback Request</button>
+                                                <button class="btn btn-outline-secondary">Miscellaneous Request</button>
+                                                <button class="btn btn-outline-secondary">Temporary Access</button>
+                                                <!--                                               
+                                                <button >
+                                                    <button class="btn" type="button" data-bs-toggle="dropdown"
+                                                        aria-expanded="false">
+                                                        <i class="bi bi-three-dots"></i> More
+                                                    </button>
+                                                    <ul class="dropdown-menu">
+                                                        <li><input type="search" class="form-control search-input"
+                                                                placeholder="Search..."></li>
+                                                        <li>
+                                                            <hr class="dropdown-divider">
+                                                        </li>
+                                                        <li>
+                                                            <a class="dropdown-item" href="#">Network Outage</a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="dropdown-item" href="#">Printer Not Responding</a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="dropdown-item" href="#">Performance Issues</a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="dropdown-item" href="#">System Crash</a>
+                                                        </li>
+                                                    </ul>
+                                                </button> -->
+                                            </div>
+
+                                            <!-- Details -->
+                                            <div class="section-label"><i
+                                                    class="bi bi-info-circle-fill section-icon text-warning"></i>Details
+                                            </div>
+                                            <div class="mb-2">
+                                                <button class="btn btn-outline-secondary">IT Support
+                                                    Satisfaction</button>
+                                                <button class="btn btn-outline-secondary active">Suggestion
+                                                    Submission</button>
+                                                <button class="btn btn-outline-secondary">System Usability
+                                                    Feedback</button>
+                                            </div>
+
+                                            <!-- Description -->
+                                            <div class="section-label"><i
+                                                    class="bi bi-chat-right-text-fill section-icon text-danger"></i>Service
+                                                Request/Incident Description</div>
+                                            <textarea class="form-control mb-3" rows="3"
+                                                placeholder="Enter a description..."></textarea>
+
+                                            <!-- File Upload -->
+                                            <div class="section-label"><i
+                                                    class="bi bi-upload section-icon text-danger"></i>Upload
+                                                Images/Documents</div>
+                                            <input type="file" class="form-control mb-2" />
+
+                                            <!-- Extra Link -->
+                                            <a href="#" id="toggle-more-info" class="form-link">Fill More
+                                                Information</a>
+
+                                            <!-- More Information Fields (hidden by default) -->
+                                            <div id="more-info-fields" class="d-none mt-3">
+                                                <div class="row">
+                                                    <div class="col-md-4">
+                                                        <label for="priorityLevel" class="form-label">Priority
+                                                            Level</label>
+                                                        <select id="priorityLevel" class="form-select">
+                                                            <option selected>Select Priority...</option>
+                                                            <option value="low">Low</option>
+                                                            <option value="medium">Medium</option>
+                                                            <option value="high">High</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <label for="contactNumber" class="form-label">Contact
+                                                            Number</label>
+                                                        <input type="tel" id="contactNumber" class="form-control"
+                                                            placeholder="Enter contact number">
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <label for="costEstimate" class="form-label">Cost
+                                                            Estimate</label>
+                                                        <input type="text" id="costEstimate" class="form-control"
+                                                            placeholder="Enter cost estimate">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Buttons -->
+                                            <div class="mt-3 d-flex justify-content-end gap-2">
+                                                <button class="btn btn-md cancel-btn">Cancel
+                                                    <a href="#"> <button class="btn btn-primary btn-md custom-btn"><i
+                                                                class="bi bi-plus-lg"></i>Submit Request</button></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="tab-pane fade card mt-24" id="pills-technician" role="tabpanel">
+                            <div class="card-head helpDesk-card-head">
+                                <h5 class="card-title">Technician Requests</h5>
+                            </div>
+                            <div class="helpDesk-card-head">
+                                <div class="">
+                                    <div class="">
+                                        <div class="d-flex gap-2 align-items-center">
+
+                                            <!-- Search Input -->
+                                            <div class="input-group filter-input search-ccust-input">
+                                                <span class="input-group-text bg-white border-end-0"><i
+                                                        class="bi bi-search"></i></span>
+                                                <input type="text" class="form-control border-start-0"
+                                                    placeholder="Search">
+                                            </div>
+
+
+
+                                            <div class="dropdown">
+                                                <button class="btn btn-light dropdown-toggle custom-dropdown-btn"
+                                                    type="button" data-bs-toggle="dropdown">
+                                                    <i class="bi bi-geo-alt"></i> Location
+                                                    <span><i class="bi bi-chevron-down dropdown-arrow"></i></span>
+                                                </button>
+
+                                                <ul class="dropdown-menu custom-dropdown-menu">
+                                                    <li class="dropdown-search-wrapper">
+                                                        <input type="text" class="form-control dropdown-search-input"
+                                                            placeholder="Search location...">
+                                                    </li>
+                                                    <li><a class="dropdown-item" href="#">Indiranagar (IND)</a>
+                                                    </li>
+                                                    <li><a class="dropdown-item" href="#">Somajiguda (SMG)</a></li>
+                                                    <li><a class="dropdown-item" href="#">Banjara Hills (BNJ)</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+
+                                            <div class="dropdown">
+                                                <button class="btn btn-light dropdown-toggle custom-dropdown-btn"
+                                                    type="button" data-bs-toggle="dropdown">
+                                                    <i class="bi bi-geo-alt"></i> Main Category
+                                                    <span><i class="bi bi-chevron-down dropdown-arrow"></i></span>
+                                                </button>
+
+                                                <ul class="dropdown-menu custom-dropdown-menu">
+                                                    <li class="dropdown-search-wrapper">
+                                                        <input type="text" class="form-control dropdown-search-input"
+                                                            placeholder="Search location...">
+                                                    </li>
+                                                    <li><a class="dropdown-item" href="#">Indiranagar (IND)</a>
+                                                    </li>
+                                                    <li><a class="dropdown-item" href="#">Somajiguda (SMG)</a></li>
+                                                    <li><a class="dropdown-item" href="#">Banjara Hills (BNJ)</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                            <div class="dropdown">
+                                                <button class="btn btn-light dropdown-toggle custom-dropdown-btn"
+                                                    type="button" data-bs-toggle="dropdown">
+                                                    <i class="bi bi-geo-alt"></i> Sub-Category
+                                                    <span><i class="bi bi-chevron-down dropdown-arrow"></i></span>
+                                                </button>
+
+                                                <ul class="dropdown-menu custom-dropdown-menu">
+                                                    <li class="dropdown-search-wrapper">
+                                                        <input type="text" class="form-control dropdown-search-input"
+                                                            placeholder="Search location...">
+                                                    </li>
+                                                    <li><a class="dropdown-item" href="#">Indiranagar (IND)</a>
+                                                    </li>
+                                                    <li><a class="dropdown-item" href="#">Somajiguda (SMG)</a></li>
+                                                    <li><a class="dropdown-item" href="#">Banjara Hills (BNJ)</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                            <div class="dropdown">
+                                                <button class="btn btn-light dropdown-toggle custom-dropdown-btn"
+                                                    type="button" data-bs-toggle="dropdown">
+                                                    <i class="bi bi-geo-alt"></i> Child Category
+                                                    <span><i class="bi bi-chevron-down dropdown-arrow"></i></span>
+                                                </button>
+
+                                                <ul class="dropdown-menu custom-dropdown-menu">
+                                                    <li class="dropdown-search-wrapper">
+                                                        <input type="text" class="form-control dropdown-search-input"
+                                                            placeholder="Search location...">
+                                                    </li>
+                                                    <li><a class="dropdown-item" href="#">Indiranagar (IND)</a>
+                                                    </li>
+                                                    <li><a class="dropdown-item" href="#">Somajiguda (SMG)</a></li>
+                                                    <li><a class="dropdown-item" href="#">Banjara Hills (BNJ)</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+
+                                            <!-- Date Pickers -->
+                                            <input type="date" class="form-control filter-select"
+                                                placeholder="From Date">
+                                            <input type="date" class="form-control filter-select" placeholder="To Date">
+
+                                            <!-- Status Dropdown -->
+                                            <!-- <select class="form-select filter-select">
+                                        <option selected>Status</option>
+                                    </select> -->
+
+                                            <div class="dropdown">
+                                                <button class="btn btn-light dropdown-toggle custom-dropdown-btn"
+                                                    type="button" data-bs-toggle="dropdown">
+                                                    <i class="bi bi-geo-alt"></i> Child Category
+                                                    <span><i class="bi bi-chevron-down dropdown-arrow"></i></span>
+                                                </button>
+
+                                                <ul class="dropdown-menu custom-dropdown-menu">
+                                                    <li class="dropdown-search-wrapper">
+                                                        <input type="text" class="form-control dropdown-search-input"
+                                                            placeholder="Search location...">
+                                                    </li>
+                                                    <li><a class="dropdown-item" href="#">Indiranagar (IND)</a>
+                                                    </li>
+                                                    <li><a class="dropdown-item" href="#">Somajiguda (SMG)</a></li>
+                                                    <li><a class="dropdown-item" href="#">Banjara Hills (BNJ)</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="card-containt technician-table-data">
+
+                                <div>
+                                    <div class="table-responsive">
+                                        <table class="table align-middle table-bordered table-responsive-stack">
+                                            <thead class="table-light">
+                                                <tr>
+                                                    <th><input type="checkbox"></th>
+                                                    <th>Ticket Id</th>
+                                                    <th>Requested</th>
+                                                    <th>Requestor Date</th>
+                                                    <th>Issue Location</th>
+                                                    <th>Category</th>
+                                                    <th>Status</th>
+                                                    <th>Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><input type="checkbox"></td>
+                                                    <td data-label="Ticket Id">10062025/56</td>
+                                                    <td data-label="Requested">
+                                                        <img src="https://randomuser.me/api/portraits/men/75.jpg"
+                                                            class="table-avatar" alt="">
+                                                        qfmsadmin/Qfmsadmin
+                                                    </td>
+                                                    <td data-label="Requestor Date">Jun 10 2025 • 11:47AM</td>
+                                                    <td data-label="Issue Location">Somajiguda</td>
+                                                    <td data-label="Category">Incident</td>
+                                                    <td data-label="Status">
+                                                        <div class="status-badge in-progress"><i
+                                                                class="bi bi-clock"></i> In progress</div>
+                                                    </td>
+                                                    <td data-label="Action" class="action-icons">
+                                                        <a href="#" class="action-btn view" data-bs-toggle="offcanvas"
+                                                            data-bs-target="#ticketDetailsOffcanvas"><i
+                                                                class="bi bi-eye"></i></a>
+                                                        <!-- <i class="bi bi-eye"></i> -->
+                                                        <i class="bi bi-pencil-square"></i>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input type="checkbox"></td>
+                                                    <td data-label="Ticket Id">10062025/56</td>
+                                                    <td data-label="Requested">
+                                                        <img src="https://randomuser.me/api/portraits/women/32.jpg"
+                                                            class="table-avatar" alt="">
+                                                        Annette Black
+                                                    </td>
+                                                    <td data-label="Requestor Date">Jun 10 2025 • 11:47AM</td>
+                                                    <td data-label="Issue Location">Somajiguda</td>
+                                                    <td data-label="Category">Maintenance</td>
+                                                    <td data-label="Status">
+                                                        <div class="status-badge on-hold"><i
+                                                                class="bi bi-pause-circle"></i> On hold</div>
+                                                    </td>
+                                                    <td data-label="Action" class="action-icons">
+                                                        <i class="bi bi-eye"></i>
+                                                        <i class="bi bi-pencil-square"></i>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input type="checkbox"></td>
+                                                    <td data-label="Ticket Id">10062025/56</td>
+                                                    <td data-label="Requested">
+                                                        <img src="https://randomuser.me/api/portraits/men/1.jpg"
+                                                            class="table-avatar" alt="">
+                                                        Annette Black
+                                                    </td>
+                                                    <td data-label="Requestor Date">Jun 10 2025 • 11:47AM</td>
+                                                    <td data-label="Issue Location">Somajiguda</td>
+                                                    <td data-label="Category">Maintenance</td>
+                                                    <td data-label="Status">
+                                                        <div class="status-badge assigned"><i class="bi bi-person"></i>
+                                                            Assigned</div>
+                                                    </td>
+                                                    <td data-label="Action" class="action-icons">
+                                                        <i class="bi bi-eye"></i>
+                                                        <i class="bi bi-pencil-square"></i>
+                                                    </td>
+                                                </tr>
+                                                <!-- Repeat for more rows -->
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                    <!-- Pagination -->
+                                    <nav aria-label="Page navigation example">
+                                        <ul class="pagination justify-content-end mt-3">
+                                            <li class="page-item disabled">
+                                                <a class="page-link">&laquo;</a>
+                                            </li>
+                                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                            <li class="page-item">
+                                                <a class="page-link">&raquo;</a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+
+
+
+
+                </div>
+            </main>
+            <!-- End Main Content -->
+        </div>
+        <!-- End Page Content -->
+    </div>
+
+
+    <!-- Ticket Details Offcanvas -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="ticketDetailsOffcanvas"
+        aria-labelledby="ticketDetailsOffcanvasLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="ticketDetailsOffcanvasLabel">Request Details</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="d-flex align-items-center mb-3">
+                <img src="https://i.pravatar.cc/40?img=1" class="rounded-circle me-3" alt="user">
+                <div class="offcanvas-profile-sec">
+                    <h6 class="mb-0">qfmsadmin</h6>
+                    <small class="text-muted">Ticket Id: 10082025/56</small>
+                </div>
+
+                <div class="ms-auto status-badge closed"><i class="bi bi-check-circle"></i> Closed</div>
+            </div>
+            <hr>
+            <div class="detail-row">
+                <span class="detail-label">Requestor Date</span>
+                <span class="detail-value">deanna.curtis@example.com</span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">Issue Location</span>
+                <span class="detail-value">deanna.curtis@example.com</span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">Category</span>
+                <span class="detail-value">Maintenance</span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">Subcategory</span>
+                <span class="detail-value">Login Issues</span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">Specific Detail</span>
+                <span class="detail-value">Account Lockout</span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">Assigned Agent/Technician</span>
+                <span class="detail-value">166/Muneer/Ali Mirza</span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">Contact Number</span>
+                <span class="detail-value">9611880200</span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">Priority Level</span>
+                <span class="detail-value fw-bold text-warning">Medium</span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">Resolution Time</span>
+                <span class="detail-value">1 Days 1 Hr 49 Min</span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">Cost Estimate</span>
+                <span class="detail-value">...</span>
+            </div>
+            <div class="mt-3">
+                <h6 class="mb-2 f-13 text-color">Latest Remarks</h6>
+                <p class="text-muted f-13">Lorem ipsum is placeholder text commonly used in the graphic, print, and
+                    publishing industries for previewing layouts and visual mockups.</p>
+            </div>
+            <div class="mt-4">
+                <h6 class="f-13 text-color">Update Status</h6>
+                <select class="form-select mb-3">
+                    <option selected>Update Status</option>
+                    <option value="1">Assigned</option>
+                    <option value="2">In Progress</option>
+                    <option value="3">On Hold</option>
+                    <option value="4">Closed</option>
+                </select>
+                <h6 class="f-13 text-color">Update Notes</h6>
+                <textarea class="form-control" rows="3" placeholder="Add a note"></textarea>
+            </div>
+        </div>
+        <div class="offcanvas-footer p-3 bg-light">
+            <button class="btn btn-primary w-100">Update</button>
+        </div>
+    </div>
+
+    <!-- Service Escalation Mapping Modal -->
+    <div class="modal fade" id="escalationModal" tabindex="-1" aria-labelledby="escalationModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content p-3">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="escalationModalLabel">View SLA & Escalation Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="escalation-header mb-4">
+                        <h6>Service Escalation Mapping Details</h6>
+                        <div class="response-time">Response time by escalation level</div>
+                    </div>
+
+
+                    <div class="escalation-map  row text-center">
+                        <!-- Helpdesk In-Charge -->
+                        <div class="col-md-3 escalation-col">
+                            <div class="level-box">
+                                <div class="lavel-status-chips">
+                                    <span class="time-badge assigned" data-bs-toggle="tooltip"
+                                        title="Assigned Time">
+                                        <i class="bi bi-person"></i> 60 m
+                                    </span>
+
+                                    <!-- In Progress -->
+                                    <span class="time-badge in-progress" data-bs-toggle="tooltip"
+                                        title="In Progress">
+                                        <i class="bi bi-clock"></i> 60 m
+                                    </span>
+
+                                    <!-- On Hold -->
+                                    <span class="time-badge on-hold" data-bs-toggle="tooltip"
+                                        title="On hold">
+                                        <i class="bi bi-pause-circle"></i> 60
+                                    </span>
+                                </div>
+                                <div class="lavel-title">
+                                    HELPDESK IN-CHARGE
+                                </div>
+                            </div>
+
+                            <div class="escalation-card">
+                                <img src="https://randomuser.me/api/portraits/men/36.jpg">
+                                <div class="emp-info">
+                                    <div class="name">Muneef Ali Mirza</div>
+                                    <div class="id">Employee Id : 166</div>
+                                </div>
+                            </div>
+                            <div class="escalation-card">
+                                <img src="https://randomuser.me/api/portraits/women/45.jpg">
+                                <div class="emp-info">
+                                    <div class="name">Naga venkata sarath</div>
+                                    <div class="id">Employee Id : 448</div>
+                                </div>
+                            </div>
+                            <div class="escalation-card">
+                                <img src="https://randomuser.me/api/portraits/men/75.jpg">
+                                <div class="emp-info">
+                                    <div class="name">K v s r raghu</div>
+                                    <div class="id">Employee Id : 45</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- L1 Manager -->
+                        <div class="col-md-3 escalation-col">
+                           <div class="level-box">
+                                <div class="lavel-status-chips">
+                                    <span class="time-badge assigned" data-bs-toggle="tooltip"
+                                        title="Assigned Time">
+                                        <i class="bi bi-person"></i> 60 m
+                                    </span>
+
+                                    <!-- In Progress -->
+                                    <span class="time-badge in-progress" data-bs-toggle="tooltip"
+                                        title="In Progress">
+                                        <i class="bi bi-clock"></i> 60 m
+                                    </span>
+
+                                    <!-- On Hold -->
+                                    <span class="time-badge on-hold" data-bs-toggle="tooltip"
+                                        title="On hold">
+                                        <i class="bi bi-pause-circle"></i> 60
+                                    </span>
+                                </div>
+                                <div class="lavel-title">
+                                    L1 MANAGER
+                                </div>
+                            </div>
+                            <div class="escalation-card">
+                                <img src="https://randomuser.me/api/portraits/women/50.jpg">
+                                <div class="emp-info">
+                                    <div class="name">Sangeetha</div>
+                                    <div class="id">Employee Id : 53</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- L2 Manager -->
+                        <div class="col-md-3 escalation-col">
+                            <div class="level-box">
+                                <div class="lavel-status-chips">
+                                    <span class="time-badge assigned" data-bs-toggle="tooltip"
+                                        title="Assigned Time">
+                                        <i class="bi bi-person"></i> 60 m
+                                    </span>
+
+                                    <!-- In Progress -->
+                                    <span class="time-badge in-progress" data-bs-toggle="tooltip"
+                                        title="In Progress">
+                                        <i class="bi bi-clock"></i> 60 m
+                                    </span>
+
+                                    <!-- On Hold -->
+                                    <span class="time-badge on-hold" data-bs-toggle="tooltip"
+                                        title="On hold">
+                                        <i class="bi bi-pause-circle"></i> 60
+                                    </span>
+                                </div>
+                                <div class="lavel-title">
+                                    L2 MANAGER
+                                </div>
+                            </div>
+                            <div class="escalation-card">
+                                <img src="https://randomuser.me/api/portraits/men/75.jpg">
+                                <div class="emp-info">
+                                    <div class="name">K v s r raghu</div>
+                                    <div class="id">Employee Id : 45</div>
+                                </div>
+                            </div>
+                            <div class="escalation-card">
+                                <img src="https://randomuser.me/api/portraits/women/28.jpg">
+                                <div class="emp-info">
+                                    <div class="name">Arpitha</div>
+                                    <div class="id">Employee Id : 453</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- L3 Manager -->
+                        <div class="col-md-3 escalation-col">
+                            <div class="level-box">
+                                <div class="lavel-status-chips">
+                                    <span class="time-badge assigned" data-bs-toggle="tooltip"
+                                        title="Assigned Time">
+                                        <i class="bi bi-person"></i> 60 m
+                                    </span>
+
+                                    <!-- In Progress -->
+                                    <span class="time-badge in-progress" data-bs-toggle="tooltip"
+                                        title="In Progress">
+                                        <i class="bi bi-clock"></i> 60 m
+                                    </span>
+
+                                    <!-- On Hold -->
+                                    <span class="time-badge on-hold" data-bs-toggle="tooltip"
+                                        title="On hold">
+                                        <i class="bi bi-pause-circle"></i> 60
+                                    </span>
+                                </div>
+                                <div class="lavel-title">
+                                    L3 MANAGER
+                                </div>
+                            </div>
+                            <div class="escalation-card">
+                                <img src="https://randomuser.me/api/portraits/men/12.jpg">
+                                <div class="emp-info">
+                                    <div class="name">Amit</div>
+                                    <div class="id">Employee Id : 7777</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- end row -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        xintegrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const toggleLink = document.getElementById('toggle-more-info');
+            const moreInfoFields = document.getElementById('more-info-fields');
+
+            if (toggleLink && moreInfoFields) {
+                toggleLink.addEventListener('click', function (event) {
+                    event.preventDefault(); // Prevent default link behavior
+                    const isHidden = moreInfoFields.classList.contains('d-none');
+                    moreInfoFields.classList.toggle('d-none');
+
+                    // Optionally, change the link text
+                    toggleLink.textContent = isHidden ? 'Hide Extra Information' : 'Fill More Information';
+                });
+            }
+        });
+
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
+
+    </script>
+
+
+</body>
+
+</html>
