@@ -84,16 +84,16 @@
         <div id="content">
 
             <!-- Header -->
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <nav class="navbar navbar-expand navbar-light bg-light">
                 <div class="container-fluid">
 
                     <button type="button" id="sidebar-toggle" class="btn">
                         <i class="bi bi-list"></i>
                     </button>
 
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div class="navbar-collapse" id="navbarSupportedContent">
                         <!-- Search Bar -->
-                        <form class="d-flex ms-3 global-search-input">
+                        <form class="d-none d-lg-flex ms-3 global-search-input">
                             <div class="input-group">
                                 <span class="input-group-text bg-transparent border-0"><i
                                         class="bi bi-search"></i></span>
@@ -103,28 +103,28 @@
                         </form>
 
                         <!-- Right Aligned Items -->
-                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
-                            <li class="nav-item me-3">
+                        <ul class="navbar-nav ms-auto mb-lg-0 align-items-center">
+                            <li class="nav-item me-3 d-none d-md-block me-3">
                                 <div class="d-flex flex-column company-logo">
                                     <img src="..//Images/company-logo.png" alt="Logo" class="sidebar-logo-text">
                                 </div>
                             </li>
-                            <li class="nav-item me-3 last-login">
+                            <li class="nav-item me-3 d-none d-md-block last-login">
                                 <div class="d-flex flex-column">
                                     <span class="">Last Login</span>
                                     <small class="text-muted">26 May 2025 12:31:00</small>
                                 </div>
                             </li>
 
-                            <li class="nav-item me-3 notification-bell">
+                            <li class="me-3 notification-bell">
                                 <a class="nav-link" href="#"><i class="bi bi-bell"></i></a>
                             </li>
-                            <li class="nav-item dropdown user-profile">
+                            <li class="dropdown user-profile">
                                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                                     aria-expanded="false">
                                     <img src="https://i.pravatar.cc/40?img=3" class="rounded-circle" alt="Profile">
                                 </a>
-                                <ul class="dropdown-menu dropdown-menu-end custom-dropdown-menu">
+                                <ul class="dropdown-menu dropdown-menu-end">
                                     <li><a class="dropdown-item" href="#">My Profile</a></li>
                                     <li><a class="dropdown-item" href="#">Settings</a></li>
                                     <li>
@@ -185,136 +185,135 @@
                             </div>
                             <div class="helpDesk-card-head">
                                 <div class="">
-                                    <div class="">
-                                        <div class="d-flex gap-2 align-items-center">
+                                    <div class="d-none d-lg-flex gap-2 align-items-center">
 
-                                            <!-- Search Input -->
-                                            <div class="input-group filter-input search-ccust-input">
-                                                <span class="input-group-text bg-white border-end-0"><i
-                                                        class="bi bi-search"></i></span>
-                                                <input type="text" class="form-control border-start-0"
-                                                    placeholder="Search">
-                                            </div>
+                                        <!-- Search Input -->
+                                        <div class="input-group filter-input search-ccust-input">
+                                            <span class="input-group-text bg-white border-end-0"><i
+                                                    class="bi bi-search"></i></span>
+                                            <input type="text" class="form-control border-start-0" placeholder="Search">
+                                        </div>
 
 
 
-                                            <div class="dropdown">
-                                                <button class="btn btn-light dropdown-toggle custom-dropdown-btn"
-                                                    type="button" data-bs-toggle="dropdown">
-                                                    <i class="bi bi-geo-alt"></i> Location
-                                                    <span><i class="bi bi-chevron-down dropdown-arrow"></i></span>
-                                                </button>
+                                        <div class="dropdown">
+                                            <button class="btn btn-light dropdown-toggle custom-dropdown-btn"
+                                                type="button" data-bs-toggle="dropdown">
+                                                <i class="bi bi-geo-alt"></i> Location
+                                                <span><i class="bi bi-chevron-down dropdown-arrow"></i></span>
+                                            </button>
 
-                                                <ul class="dropdown-menu custom-dropdown-menu">
-                                                    <li class="dropdown-search-wrapper">
-                                                        <input type="text" class="form-control dropdown-search-input"
-                                                            placeholder="Search location...">
-                                                    </li>
-                                                    <li><a class="dropdown-item" href="#">Indiranagar (IND)</a>
-                                                    </li>
-                                                    <li><a class="dropdown-item" href="#">Somajiguda (SMG)</a></li>
-                                                    <li><a class="dropdown-item" href="#">Banjara Hills (BNJ)</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-
-
-                                            <div class="dropdown">
-                                                <button class="btn btn-light dropdown-toggle custom-dropdown-btn"
-                                                    type="button" data-bs-toggle="dropdown">
-                                                    <i class="bi bi-geo-alt"></i> Main Category
-                                                    <span><i class="bi bi-chevron-down dropdown-arrow"></i></span>
-                                                </button>
-
-                                                <ul class="dropdown-menu custom-dropdown-menu">
-                                                    <li class="dropdown-search-wrapper">
-                                                        <input type="text" class="form-control dropdown-search-input"
-                                                            placeholder="Search location...">
-                                                    </li>
-                                                    <li><a class="dropdown-item" href="#">Indiranagar (IND)</a>
-                                                    </li>
-                                                    <li><a class="dropdown-item" href="#">Somajiguda (SMG)</a></li>
-                                                    <li><a class="dropdown-item" href="#">Banjara Hills (BNJ)</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-
-                                            <div class="dropdown">
-                                                <button class="btn btn-light dropdown-toggle custom-dropdown-btn"
-                                                    type="button" data-bs-toggle="dropdown">
-                                                    <i class="bi bi-geo-alt"></i> Sub-Category
-                                                    <span><i class="bi bi-chevron-down dropdown-arrow"></i></span>
-                                                </button>
-
-                                                <ul class="dropdown-menu custom-dropdown-menu">
-                                                    <li class="dropdown-search-wrapper">
-                                                        <input type="text" class="form-control dropdown-search-input"
-                                                            placeholder="Search location...">
-                                                    </li>
-                                                    <li><a class="dropdown-item" href="#">Indiranagar (IND)</a>
-                                                    </li>
-                                                    <li><a class="dropdown-item" href="#">Somajiguda (SMG)</a></li>
-                                                    <li><a class="dropdown-item" href="#">Banjara Hills (BNJ)</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-
-                                            <div class="dropdown">
-                                                <button class="btn btn-light dropdown-toggle custom-dropdown-btn"
-                                                    type="button" data-bs-toggle="dropdown">
-                                                    <i class="bi bi-geo-alt"></i> Child Category
-                                                    <span><i class="bi bi-chevron-down dropdown-arrow"></i></span>
-                                                </button>
-
-                                                <ul class="dropdown-menu custom-dropdown-menu">
-                                                    <li class="dropdown-search-wrapper">
-                                                        <input type="text" class="form-control dropdown-search-input"
-                                                            placeholder="Search location...">
-                                                    </li>
-                                                    <li><a class="dropdown-item" href="#">Indiranagar (IND)</a>
-                                                    </li>
-                                                    <li><a class="dropdown-item" href="#">Somajiguda (SMG)</a></li>
-                                                    <li><a class="dropdown-item" href="#">Banjara Hills (BNJ)</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
+                                            <ul class="dropdown-menu custom-dropdown-menu">
+                                                <li class="dropdown-search-wrapper">
+                                                    <input type="text" class="form-control dropdown-search-input"
+                                                        placeholder="Search location...">
+                                                </li>
+                                                <li><a class="dropdown-item" href="#">Indiranagar (IND)</a>
+                                                </li>
+                                                <li><a class="dropdown-item" href="#">Somajiguda (SMG)</a></li>
+                                                <li><a class="dropdown-item" href="#">Banjara Hills (BNJ)</a>
+                                                </li>
+                                            </ul>
+                                        </div>
 
 
-                                            <!-- Date Pickers -->
-                                            <input type="date" class="form-control filter-select"
-                                                placeholder="From Date">
-                                            <input type="date" class="form-control filter-select" placeholder="To Date">
+                                        <div class="dropdown">
+                                            <button class="btn btn-light dropdown-toggle custom-dropdown-btn"
+                                                type="button" data-bs-toggle="dropdown">
+                                                <i class="bi bi-geo-alt"></i> Main Category
+                                                <span><i class="bi bi-chevron-down dropdown-arrow"></i></span>
+                                            </button>
 
-                                            <!-- Status Dropdown -->
-                                            <!-- <select class="form-select filter-select">
+                                            <ul class="dropdown-menu custom-dropdown-menu">
+                                                <li class="dropdown-search-wrapper">
+                                                    <input type="text" class="form-control dropdown-search-input"
+                                                        placeholder="Search location...">
+                                                </li>
+                                                <li><a class="dropdown-item" href="#">Indiranagar (IND)</a>
+                                                </li>
+                                                <li><a class="dropdown-item" href="#">Somajiguda (SMG)</a></li>
+                                                <li><a class="dropdown-item" href="#">Banjara Hills (BNJ)</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="dropdown">
+                                            <button class="btn btn-light dropdown-toggle custom-dropdown-btn"
+                                                type="button" data-bs-toggle="dropdown">
+                                                <i class="bi bi-geo-alt"></i> Sub-Category
+                                                <span><i class="bi bi-chevron-down dropdown-arrow"></i></span>
+                                            </button>
+
+                                            <ul class="dropdown-menu custom-dropdown-menu">
+                                                <li class="dropdown-search-wrapper">
+                                                    <input type="text" class="form-control dropdown-search-input"
+                                                        placeholder="Search location...">
+                                                </li>
+                                                <li><a class="dropdown-item" href="#">Indiranagar (IND)</a>
+                                                </li>
+                                                <li><a class="dropdown-item" href="#">Somajiguda (SMG)</a></li>
+                                                <li><a class="dropdown-item" href="#">Banjara Hills (BNJ)</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="dropdown">
+                                            <button class="btn btn-light dropdown-toggle custom-dropdown-btn"
+                                                type="button" data-bs-toggle="dropdown">
+                                                <i class="bi bi-geo-alt"></i> Child Category
+                                                <span><i class="bi bi-chevron-down dropdown-arrow"></i></span>
+                                            </button>
+
+                                            <ul class="dropdown-menu custom-dropdown-menu">
+                                                <li class="dropdown-search-wrapper">
+                                                    <input type="text" class="form-control dropdown-search-input"
+                                                        placeholder="Search location...">
+                                                </li>
+                                                <li><a class="dropdown-item" href="#">Indiranagar (IND)</a>
+                                                </li>
+                                                <li><a class="dropdown-item" href="#">Somajiguda (SMG)</a></li>
+                                                <li><a class="dropdown-item" href="#">Banjara Hills (BNJ)</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+
+                                        <!-- Date Pickers -->
+                                        <input type="date" class="form-control filter-select" placeholder="From Date">
+                                        <input type="date" class="form-control filter-select" placeholder="To Date">
+
+                                        <!-- Status Dropdown -->
+                                        <!-- <select class="form-select filter-select">
                                         <option selected>Status</option>
                                     </select> -->
 
-                                            <div class="dropdown">
-                                                <button class="btn btn-light dropdown-toggle custom-dropdown-btn"
-                                                    type="button" data-bs-toggle="dropdown">
-                                                    <i class="bi bi-geo-alt"></i> Child Category
-                                                    <span><i class="bi bi-chevron-down dropdown-arrow"></i></span>
-                                                </button>
+                                        <div class="dropdown">
+                                            <button class="btn btn-light dropdown-toggle custom-dropdown-btn"
+                                                type="button" data-bs-toggle="dropdown">
+                                                <i class="bi bi-geo-alt"></i> Child Category
+                                                <span><i class="bi bi-chevron-down dropdown-arrow"></i></span>
+                                            </button>
 
-                                                <ul class="dropdown-menu custom-dropdown-menu">
-                                                    <li class="dropdown-search-wrapper">
-                                                        <input type="text" class="form-control dropdown-search-input"
-                                                            placeholder="Search location...">
-                                                    </li>
-                                                    <li><a class="dropdown-item" href="#">Indiranagar (IND)</a>
-                                                    </li>
-                                                    <li><a class="dropdown-item" href="#">Somajiguda (SMG)</a></li>
-                                                    <li><a class="dropdown-item" href="#">Banjara Hills (BNJ)</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-
+                                            <ul class="dropdown-menu custom-dropdown-menu">
+                                                <li class="dropdown-search-wrapper">
+                                                    <input type="text" class="form-control dropdown-search-input"
+                                                        placeholder="Search location...">
+                                                </li>
+                                                <li><a class="dropdown-item" href="#">Indiranagar (IND)</a>
+                                                </li>
+                                                <li><a class="dropdown-item" href="#">Somajiguda (SMG)</a></li>
+                                                <li><a class="dropdown-item" href="#">Banjara Hills (BNJ)</a>
+                                                </li>
+                                            </ul>
                                         </div>
+
                                     </div>
-
+                                    <div class="d-block d-lg-none">
+                                        <button class="custom-dropdown-btn w-auto" data-bs-toggle="offcanvas"
+                                            data-bs-target="#RequestFilterOffcanvas"><i
+                                                class="bi bi-filter"></i>Filter</button>
+                                    </div>
                                 </div>
-
                             </div>
 
                             <div class="card-containt">
@@ -330,138 +329,137 @@
                             <div class="card-head helpDesk-card-head">
                                 <h5 class="card-title">Technician Requests</h5>
                             </div>
-                            <div class="helpDesk-card-head">
+                           <div class="helpDesk-card-head">
                                 <div class="">
-                                    <div class="">
-                                        <div class="d-flex gap-2 align-items-center">
+                                    <div class="d-none d-lg-flex gap-2 align-items-center">
 
-                                            <!-- Search Input -->
-                                            <div class="input-group filter-input">
-                                                <span class="input-group-text bg-white border-end-0"><i
-                                                        class="bi bi-search"></i></span>
-                                                <input type="text" class="form-control border-start-0"
-                                                    placeholder="Search">
-                                            </div>
+                                        <!-- Search Input -->
+                                        <div class="input-group filter-input search-ccust-input">
+                                            <span class="input-group-text bg-white border-end-0"><i
+                                                    class="bi bi-search"></i></span>
+                                            <input type="text" class="form-control border-start-0" placeholder="Search">
+                                        </div>
 
 
 
-                                            <div class="dropdown">
-                                                <button class="btn btn-light dropdown-toggle custom-dropdown-btn"
-                                                    type="button" data-bs-toggle="dropdown">
-                                                    <i class="bi bi-geo-alt"></i> Location
-                                                    <span><i class="bi bi-chevron-down dropdown-arrow"></i></span>
-                                                </button>
+                                        <div class="dropdown">
+                                            <button class="btn btn-light dropdown-toggle custom-dropdown-btn"
+                                                type="button" data-bs-toggle="dropdown">
+                                                <i class="bi bi-geo-alt"></i> Location
+                                                <span><i class="bi bi-chevron-down dropdown-arrow"></i></span>
+                                            </button>
 
-                                                <ul class="dropdown-menu custom-dropdown-menu">
-                                                    <li class="dropdown-search-wrapper">
-                                                        <input type="text" class="form-control dropdown-search-input"
-                                                            placeholder="Search location...">
-                                                    </li>
-                                                    <li><a class="dropdown-item" href="#">Indiranagar (IND)</a>
-                                                    </li>
-                                                    <li><a class="dropdown-item" href="#">Somajiguda (SMG)</a></li>
-                                                    <li><a class="dropdown-item" href="#">Banjara Hills (BNJ)</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-
-
-                                            <div class="dropdown">
-                                                <button class="btn btn-light dropdown-toggle custom-dropdown-btn"
-                                                    type="button" data-bs-toggle="dropdown">
-                                                    <i class="bi bi-geo-alt"></i> Main Category
-                                                    <span><i class="bi bi-chevron-down dropdown-arrow"></i></span>
-                                                </button>
-
-                                                <ul class="dropdown-menu custom-dropdown-menu">
-                                                    <li class="dropdown-search-wrapper">
-                                                        <input type="text" class="form-control dropdown-search-input"
-                                                            placeholder="Search location...">
-                                                    </li>
-                                                    <li><a class="dropdown-item" href="#">Indiranagar (IND)</a>
-                                                    </li>
-                                                    <li><a class="dropdown-item" href="#">Somajiguda (SMG)</a></li>
-                                                    <li><a class="dropdown-item" href="#">Banjara Hills (BNJ)</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-
-                                            <div class="dropdown">
-                                                <button class="btn btn-light dropdown-toggle custom-dropdown-btn"
-                                                    type="button" data-bs-toggle="dropdown">
-                                                    <i class="bi bi-geo-alt"></i> Sub-Category
-                                                    <span><i class="bi bi-chevron-down dropdown-arrow"></i></span>
-                                                </button>
-
-                                                <ul class="dropdown-menu custom-dropdown-menu">
-                                                    <li class="dropdown-search-wrapper">
-                                                        <input type="text" class="form-control dropdown-search-input"
-                                                            placeholder="Search location...">
-                                                    </li>
-                                                    <li><a class="dropdown-item" href="#">Indiranagar (IND)</a>
-                                                    </li>
-                                                    <li><a class="dropdown-item" href="#">Somajiguda (SMG)</a></li>
-                                                    <li><a class="dropdown-item" href="#">Banjara Hills (BNJ)</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-
-                                            <div class="dropdown">
-                                                <button class="btn btn-light dropdown-toggle custom-dropdown-btn"
-                                                    type="button" data-bs-toggle="dropdown">
-                                                    <i class="bi bi-geo-alt"></i> Child Category
-                                                    <span><i class="bi bi-chevron-down dropdown-arrow"></i></span>
-                                                </button>
-
-                                                <ul class="dropdown-menu custom-dropdown-menu">
-                                                    <li class="dropdown-search-wrapper">
-                                                        <input type="text" class="form-control dropdown-search-input"
-                                                            placeholder="Search location...">
-                                                    </li>
-                                                    <li><a class="dropdown-item" href="#">Indiranagar (IND)</a>
-                                                    </li>
-                                                    <li><a class="dropdown-item" href="#">Somajiguda (SMG)</a></li>
-                                                    <li><a class="dropdown-item" href="#">Banjara Hills (BNJ)</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
+                                            <ul class="dropdown-menu custom-dropdown-menu">
+                                                <li class="dropdown-search-wrapper">
+                                                    <input type="text" class="form-control dropdown-search-input"
+                                                        placeholder="Search location...">
+                                                </li>
+                                                <li><a class="dropdown-item" href="#">Indiranagar (IND)</a>
+                                                </li>
+                                                <li><a class="dropdown-item" href="#">Somajiguda (SMG)</a></li>
+                                                <li><a class="dropdown-item" href="#">Banjara Hills (BNJ)</a>
+                                                </li>
+                                            </ul>
+                                        </div>
 
 
-                                            <!-- Date Pickers -->
-                                            <input type="date" class="form-control filter-select"
-                                                placeholder="From Date">
-                                            <input type="date" class="form-control filter-select" placeholder="To Date">
+                                        <div class="dropdown">
+                                            <button class="btn btn-light dropdown-toggle custom-dropdown-btn"
+                                                type="button" data-bs-toggle="dropdown">
+                                                <i class="bi bi-geo-alt"></i> Main Category
+                                                <span><i class="bi bi-chevron-down dropdown-arrow"></i></span>
+                                            </button>
 
-                                            <!-- Status Dropdown -->
-                                            <!-- <select class="form-select filter-select">
+                                            <ul class="dropdown-menu custom-dropdown-menu">
+                                                <li class="dropdown-search-wrapper">
+                                                    <input type="text" class="form-control dropdown-search-input"
+                                                        placeholder="Search location...">
+                                                </li>
+                                                <li><a class="dropdown-item" href="#">Indiranagar (IND)</a>
+                                                </li>
+                                                <li><a class="dropdown-item" href="#">Somajiguda (SMG)</a></li>
+                                                <li><a class="dropdown-item" href="#">Banjara Hills (BNJ)</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="dropdown">
+                                            <button class="btn btn-light dropdown-toggle custom-dropdown-btn"
+                                                type="button" data-bs-toggle="dropdown">
+                                                <i class="bi bi-geo-alt"></i> Sub-Category
+                                                <span><i class="bi bi-chevron-down dropdown-arrow"></i></span>
+                                            </button>
+
+                                            <ul class="dropdown-menu custom-dropdown-menu">
+                                                <li class="dropdown-search-wrapper">
+                                                    <input type="text" class="form-control dropdown-search-input"
+                                                        placeholder="Search location...">
+                                                </li>
+                                                <li><a class="dropdown-item" href="#">Indiranagar (IND)</a>
+                                                </li>
+                                                <li><a class="dropdown-item" href="#">Somajiguda (SMG)</a></li>
+                                                <li><a class="dropdown-item" href="#">Banjara Hills (BNJ)</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="dropdown">
+                                            <button class="btn btn-light dropdown-toggle custom-dropdown-btn"
+                                                type="button" data-bs-toggle="dropdown">
+                                                <i class="bi bi-geo-alt"></i> Child Category
+                                                <span><i class="bi bi-chevron-down dropdown-arrow"></i></span>
+                                            </button>
+
+                                            <ul class="dropdown-menu custom-dropdown-menu">
+                                                <li class="dropdown-search-wrapper">
+                                                    <input type="text" class="form-control dropdown-search-input"
+                                                        placeholder="Search location...">
+                                                </li>
+                                                <li><a class="dropdown-item" href="#">Indiranagar (IND)</a>
+                                                </li>
+                                                <li><a class="dropdown-item" href="#">Somajiguda (SMG)</a></li>
+                                                <li><a class="dropdown-item" href="#">Banjara Hills (BNJ)</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+
+                                        <!-- Date Pickers -->
+                                        <input type="date" class="form-control filter-select" placeholder="From Date">
+                                        <input type="date" class="form-control filter-select" placeholder="To Date">
+
+                                        <!-- Status Dropdown -->
+                                        <!-- <select class="form-select filter-select">
                                         <option selected>Status</option>
                                     </select> -->
 
-                                            <div class="dropdown">
-                                                <button class="btn btn-light dropdown-toggle custom-dropdown-btn"
-                                                    type="button" data-bs-toggle="dropdown">
-                                                    <i class="bi bi-geo-alt"></i> Child Category
-                                                    <span><i class="bi bi-chevron-down dropdown-arrow"></i></span>
-                                                </button>
+                                        <div class="dropdown">
+                                            <button class="btn btn-light dropdown-toggle custom-dropdown-btn"
+                                                type="button" data-bs-toggle="dropdown">
+                                                <i class="bi bi-geo-alt"></i> Child Category
+                                                <span><i class="bi bi-chevron-down dropdown-arrow"></i></span>
+                                            </button>
 
-                                                <ul class="dropdown-menu custom-dropdown-menu">
-                                                    <li class="dropdown-search-wrapper">
-                                                        <input type="text" class="form-control dropdown-search-input"
-                                                            placeholder="Search location...">
-                                                    </li>
-                                                    <li><a class="dropdown-item" href="#">Indiranagar (IND)</a>
-                                                    </li>
-                                                    <li><a class="dropdown-item" href="#">Somajiguda (SMG)</a></li>
-                                                    <li><a class="dropdown-item" href="#">Banjara Hills (BNJ)</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-
+                                            <ul class="dropdown-menu custom-dropdown-menu">
+                                                <li class="dropdown-search-wrapper">
+                                                    <input type="text" class="form-control dropdown-search-input"
+                                                        placeholder="Search location...">
+                                                </li>
+                                                <li><a class="dropdown-item" href="#">Indiranagar (IND)</a>
+                                                </li>
+                                                <li><a class="dropdown-item" href="#">Somajiguda (SMG)</a></li>
+                                                <li><a class="dropdown-item" href="#">Banjara Hills (BNJ)</a>
+                                                </li>
+                                            </ul>
                                         </div>
+
                                     </div>
-
+                                    <div class="d-block d-lg-none">
+                                        <button class="custom-dropdown-btn w-auto" data-bs-toggle="offcanvas"
+                                            data-bs-target="#RequestFilterOffcanvas"><i
+                                                class="bi bi-filter"></i>Filter</button>
+                                    </div>
                                 </div>
-
                             </div>
 
                             <div class="card-containt technician-table-data">
@@ -572,7 +570,7 @@
 
                         </div>
 
-                         <div class="tab-pane fade card mt-24" id="pills-delegate" role="tabpanel">
+                        <div class="tab-pane fade card mt-24" id="pills-delegate" role="tabpanel">
                             <div class="card-head helpDesk-card-head">
                                 <h5 class="card-title">Assign Request</h5>
                             </div>
@@ -910,6 +908,142 @@
         <div class="offcanvas-footer p-3 bg-light">
             <button class="btn btn-primary w-100">Update</button>
         </div>
+    </div>
+
+    <!-- Filter model Offcanvas -->
+    <div class="offcanvas offcanvas-end RequestFilterOffcanvasmodel" tabindex="-1" id="RequestFilterOffcanvas"
+        aria-labelledby="RequestFilterOffcanvasLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="RequestFilterOffcanvasLabel">Request Filter</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="gap-2 align-items-center w-100">
+
+                <!-- Search Input -->
+                <div class="input-group filter-input mb-3">
+                    <span class="input-group-text bg-white border-end-0"><i class="bi bi-search"></i></span>
+                    <input type="text" class="form-control border-start-0" placeholder="Search">
+                </div>
+
+
+
+                <div class="dropdown mb-3">
+                    <button class="btn btn-light dropdown-toggle custom-dropdown-btn" type="button"
+                        data-bs-toggle="dropdown">
+                        <i class="bi bi-geo-alt"></i> Location
+                        <span class="float-end"><i class="bi bi-chevron-down dropdown-arrow"></i></span>
+                    </button>
+
+                    <ul class="dropdown-menu custom-dropdown-menu">
+                        <li class="dropdown-search-wrapper">
+                            <input type="text" class="form-control dropdown-search-input"
+                                placeholder="Search location...">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Indiranagar (IND)</a>
+                        </li>
+                        <li><a class="dropdown-item" href="#">Somajiguda (SMG)</a></li>
+                        <li><a class="dropdown-item" href="#">Banjara Hills (BNJ)</a>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <div class="dropdown mb-3">
+                    <button class="btn btn-light dropdown-toggle custom-dropdown-btn" type="button"
+                        data-bs-toggle="dropdown">
+                        <i class="bi bi-geo-alt"></i> Main Category
+                        <span class="float-end"><i class="bi bi-chevron-down dropdown-arrow"></i></span>
+                    </button>
+
+                    <ul class="dropdown-menu custom-dropdown-menu">
+                        <li class="dropdown-search-wrapper">
+                            <input type="text" class="form-control dropdown-search-input"
+                                placeholder="Search location...">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Indiranagar (IND)</a>
+                        </li>
+                        <li><a class="dropdown-item" href="#">Somajiguda (SMG)</a></li>
+                        <li><a class="dropdown-item" href="#">Banjara Hills (BNJ)</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="dropdown mb-3">
+                    <button class="btn btn-light dropdown-toggle custom-dropdown-btn" type="button"
+                        data-bs-toggle="dropdown">
+                        <i class="bi bi-geo-alt"></i> Sub-Category
+                        <span class="float-end"><i class="bi bi-chevron-down dropdown-arrow"></i></span>
+                    </button>
+
+                    <ul class="dropdown-menu custom-dropdown-menu">
+                        <li class="dropdown-search-wrapper">
+                            <input type="text" class="form-control dropdown-search-input"
+                                placeholder="Search location...">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Indiranagar (IND)</a>
+                        </li>
+                        <li><a class="dropdown-item" href="#">Somajiguda (SMG)</a></li>
+                        <li><a class="dropdown-item" href="#">Banjara Hills (BNJ)</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="dropdown mb-3">
+                    <button class="btn btn-light dropdown-toggle custom-dropdown-btn" type="button"
+                        data-bs-toggle="dropdown">
+                        <i class="bi bi-geo-alt"></i> Child Category
+                        <span class="float-end"><i class="bi bi-chevron-down dropdown-arrow"></i></span>
+                    </button>
+
+                    <ul class="dropdown-menu custom-dropdown-menu">
+                        <li class="dropdown-search-wrapper">
+                            <input type="text" class="form-control dropdown-search-input"
+                                placeholder="Search location...">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Indiranagar (IND)</a>
+                        </li>
+                        <li><a class="dropdown-item" href="#">Somajiguda (SMG)</a></li>
+                        <li><a class="dropdown-item" href="#">Banjara Hills (BNJ)</a>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <!-- Date Pickers -->
+                <input type="date" class="form-control filter-select mb-3" placeholder="From Date">
+                <input type="date" class="form-control filter-select mb-3" placeholder="To Date">
+
+                <!-- Status Dropdown -->
+                <!-- <select class="form-select filter-select">
+                                        <option selected>Status</option>
+                                    </select> -->
+
+                <div class="dropdown mb-3">
+                    <button class="btn btn-light dropdown-toggle custom-dropdown-btn" type="button"
+                        data-bs-toggle="dropdown">
+                        <i class="bi bi-geo-alt"></i> Child Category
+                        <span class="float-end"><i class="bi bi-chevron-down dropdown-arrow"></i></span>
+                    </button>
+
+                    <ul class="dropdown-menu custom-dropdown-menu">
+                        <li class="dropdown-search-wrapper">
+                            <input type="text" class="form-control dropdown-search-input"
+                                placeholder="Search location...">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Indiranagar (IND)</a>
+                        </li>
+                        <li><a class="dropdown-item" href="#">Somajiguda (SMG)</a></li>
+                        <li><a class="dropdown-item" href="#">Banjara Hills (BNJ)</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+        <!-- <div class="offcanvas-footer p-3 bg-light">
+            <button class="btn btn-primary w-100">Update</button>
+        </div> -->
     </div>
 
     <!-- Bootstrap 5 JS Bundle with Popper -->

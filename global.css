@@ -97,8 +97,18 @@ header {
     padding: 20px;
     background: #ffffff;
     border-bottom: 1px solid #f4f4f4;
-    text-align: center;
+    text-align: left;
 }
+
+#sidebar .sidebar-header img {
+    height: 32px;
+}
+
+#sidebar .sidebar-header i {
+    color: var(--text-color);
+    font-size: var(--font-size-md);
+}
+
 
 #sidebar.collapsed .sidebar-header .sidebar-logo-text {
     display: none;
@@ -273,7 +283,7 @@ a[aria-expanded="true"] .arrow-icon {
 
 
 #content {
-    width: 100%;
+    width: calc(100% - 80px);
     padding: 0;
     min-height: 100vh;
     transition: all 0.3s;
@@ -291,6 +301,7 @@ a[aria-expanded="true"] .arrow-icon {
     border: none;
     font-size: 1.5rem;
     color: #555;
+    padding: 8px 0px;
 }
 
 .search-input {
@@ -300,7 +311,7 @@ a[aria-expanded="true"] .arrow-icon {
 }
 
 .company-logo img {
-    max-height: 36px;
+    max-height: 28px;
 }
 
 .user-profile img {
@@ -329,7 +340,7 @@ a[aria-expanded="true"] .arrow-icon {
 
 .global-search-input .form-control {
     background: #f5f6fa;
-    
+
 }
 
 .navbar-brand {
@@ -579,4 +590,12 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     font-size: var(--font-size-md);
     font-weight: 500;
     margin-bottom: 0px;
+}
+
+/* Mobile media quiry css */
+
+@media (max-width: 768px) {
+    .main-content {
+        padding: 18px 0px;
+    }
 }

@@ -31,6 +31,14 @@ document.addEventListener('DOMContentLoaded', function () {
                 manageTooltips();
             });
 
+            // Set initial sidebar state based on window size
+            if (window.innerWidth <= 768) {
+                sidebar.classList.add('collapsed');
+            } else {
+                sidebar.classList.remove('collapsed');
+            }
+            
+
             // Initial check
             manageTooltips();
         });

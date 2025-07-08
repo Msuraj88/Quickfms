@@ -25,9 +25,9 @@
    padding-bottom: 12px;
  }
 
- .search-ccust-input{
-  flex-wrap: nowrap;
-    min-width: 100px;
+ .search-ccust-input {
+   flex-wrap: nowrap;
+   min-width: 100px;
  }
 
 
@@ -171,6 +171,17 @@
  .action-icons i.bi-pencil-square {
    color: #45B369;
    background: #e4f6ea;
+ }
+
+ .custom-dropdown-btn {
+   border-radius: 50px;
+   padding: 6px 16px;
+   border: 1px solid #D1D5DB;
+   font-size: var(--font-size-base);
+   background-color: var(--white-background);
+   color: var(--text-color);
+   width: 100%;
+   text-align: left;
  }
 
 
@@ -668,7 +679,7 @@ New request creation form css */
    }
 
    .helpDesk-card-head {
- flex-wrap: nowrap;
+     flex-wrap: nowrap;
      overflow-x: auto;
      overflow-y: hidden;
      white-space: nowrap;
